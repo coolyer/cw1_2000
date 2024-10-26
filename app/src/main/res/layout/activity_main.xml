@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A52A2A">
+
+        <TextView
+            android:id="@+id/websiteName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Website Name"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <EditText
+                android:id="@+id/idField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFFFFF"/>
+            <!-- This LinearLayout holds the layout Need to add lock and user icon.
+            Did use chatgpt to understand how to add icons android:drawableLeft="@drawable/ic_lock_icon" -->
+            <EditText
+                android:id="@+id/passwordField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="PASSWORD"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="#FFFFFF"
+                android:inputType="textPassword"/>
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0000FF"
+                android:text="LOGIN"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password/ID"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

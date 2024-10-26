@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/drawer_layout"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<!-- Toolbar -->
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    android:title="Request Holiday"/>
+
+<!-- Main Content -->
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/toolbar"
+    android:padding="16dp"
+    android:background="#A52A2A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Start Date Field -->
+        <EditText
+            android:id="@+id/startDateField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start Date"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="#FFFFFF"
+            android:textColor="#000000"/>
+
+        <!-- End Date Field -->
+        <EditText
+            android:id="@+id/endDateField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="End Date"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="#FFFFFF"
+            android:textColor="#000000"/>
+
+        <!-- Reason Field -->
+        <EditText
+            android:id="@+id/reasonField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Reason"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="#FFFFFF"
+            android:textColor="#000000"/>
+
+        <!-- Submit Button -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:background="#0000FF"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"/>
+    </LinearLayout>
+</ScrollView>
+
+<!-- Navigation Drawer -->
+<com.google.android.material.navigation.NavigationView
+    android:id="@+id/navigation_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:fitsSystemWindows="true"
+    app:menu="@menu/drawer_menu"/>
+</androidx.drawerlayout.widget.DrawerLayout>
